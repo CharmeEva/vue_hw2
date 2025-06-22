@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Interno</title>
+</head>
+
+<body>
+    <header class="header center">
+        <nav class="header_left">
+            <a href="index.html">
+                <img src="/img/Logo_header.svg" width="34" height="34" alt="Логотип компании" class="header_logo">
+                <span class="header_logo_text">Interno</span>
+            </a>
+        </nav>
+        <nav class="header_right">
+            <a href="index.html" class="nav_link">Домой</a>
+            <a href="index.html" class="nav_link">Проект</a>
+            <a href="index.html" class="nav_link">Блог</a>
+        </nav>
+    </header>
+    <main class="center">
+        <section class="top_content">
+            <h1 class="top_title">Пусть ваш дом будет уникальным</h1>
+            <p class="top_text">Есть много вариаций Lorem Ipsim, которые можно использовать</p>
+            <button class="top_button">
+                <p class="top_btn_text">Начать</p> <img class="top_button_pic" src="img/Vector.svg">
+            </button>
+        </section>
+
+        <section class="project center">
+            <h2 class="project_title">Следите за нашими проектами</h2>
+            <p class="project_text">Хорошо известно, что читатель будет отвлекаться<br> на читабельный контент страницы
+            </p>
+        </section>
+
+        <section class="project_content">
+            <div class="project_card">
+                <img src="img/1_kitchen.png">
+                <div class="project_content_card">
+                    <div class="project_content_text_left">
+                        <h3 class="project_card_title">Современная кухня</h3>
+                        <p class="project_card_text project_card_text_up">Декор / Планировка </p>
+                    </div>
+                    <a href="#" class="project_content_text_right"><img src="img/strelka.svg"></a>
+                </div>
+            </div>
+            <div class="project_card">
+                <img src="img/2_kitchen.png">
+                <div class="project_content_card">
+                    <div class="project_content_text_left">
+                        <h3 class="project_card_title">Современная кухня</h3>
+                        <p class="project_card_text project_card_text_up">Декор / Планировка </p>
+                    </div>
+                    <a href="#" class="project_content_text_right"><img src="img/strelka.svg"></a>
+                </div>
+            </div>
+            <div class="project_card">
+                <img src="img/3_kitchen.png">
+                <div class="project_content_card">
+                    <div class="project_content_text_left">
+                        <h3 class="project_card_title">Современная кухня</h3>
+                        <p class="project_card_text">Декор / Планировка </p>
+                    </div>
+                    <a href="#" class="project_content_text_right"><img src="img/strelka.svg"></a>
+                </div>
+            </div>
+            <div class="project_card">
+                <img src="img/4_kitchen.png">
+                <div class="project_content_card">
+                    <div class="project_content_text_left">
+                        <h3 class="project_card_title">Современная кухня</h3>
+                        <p class="project_card_text">Декор / Планировка </p>
+                    </div>
+                    <a href="#" class="project_content_text_right"><img src="img/strelka.svg"></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="counter center">
+            <div class="counter_box">
+                <h1 class="counter_title">12</h1>
+                <p class="counter_text">Лет опыта</p>
+            </div>
+            <div class="counter_box">
+                <h1 class="counter_title">85</h1>
+                <p class="counter_text">Успешных проектов</p>
+            </div>
+            <div class="counter_box">
+                <h1 class="counter_title">15</h1>
+                <p class="counter_text">Проектов в работе</p>
+            </div>
+            <div class="counter_box">
+                <h1 class="counter_title">95</h1>
+                <p class="counter_text">Счастливых клиентов</p>
+            </div>
+        </section>
+
+        <div id="app-blog">
+            <section class="article">
+                <div class="container">
+                    <h2>Статьи & Новости</h2>
+                    <div class="articles">
+                        <div class="articles__item" v-for="article in articles" :key="article.id">
+                            <div class="articles__thumb">
+                                <img :src="article.image" alt="article.alt" class="articles__img">
+                                <span class="articles__tag">{{ article.category }}</span>
+                            </div>
+                            <h3 class="articles__title">
+                                <a :href="article.link">{{ article.title }}</a>
+                            </h3>
+                            <div class="articles__info">
+                                <span class="articles__date">{{ article.date }}</span>
+                                <a :href="article.link" class="arrow articles__link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer center">
+        <div class="footer_logo_icons">
+            <a href="index.html" class="footer_logo">
+                <img src="/img/Logo_header.svg" alt="Логотип компании">
+                <span class="header_logo_text">Interno</span>
+            </a><br>
+            <a href="#" class="footer_icon"><img src="img/1_icon.svg"></a>
+            <a href="#" class="footer_icon"><img src="img/2_icon.svg"></a>
+        </div>
+
+        <div class="pages">
+            <ul>
+                <h2 class="footer_title">Страницы</h2>
+            </ul>
+            <li class="li_pages"><a href="#" class="pages_link">Домой</a></li>
+            <li class="li_pages"><a href="#" class="pages_link">Проект</a></li>
+            <li class="li_pages"><a href="#" class="pages_link">Блог</a></li>
+        </div>
+
+        <div class="contacts">
+            <h2 class="footer_title">Контакты</h2>
+            <p class="pages_link">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+            <p class="pages_link">contact@interno.com</p>
+            <p class="pages_link">(123)456 - 7890</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                articles: [
+                    {
+                        id: 1,
+                        image: 'img/1_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн кухни',
+                        title: 'Создадим лучший макет перепланировки',
+                        date: '26 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 2,
+                        image: 'img/2_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн для жизни',
+                        title: 'Лучшие интерьерные идеи по низкой цене',
+                        date: '22 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 3,
+                        image: 'img/3_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн Интерьера',
+                        title: 'Лучшие интерьерные решения для офисов',
+                        date: '25 December, 2022',
+                        link: '#'
+                    },
+                ]
+            }
+        });
+
+        new Vue({
+            el: '#app-blog',
+            data: {
+                articles: [
+                    {
+                        id: 1,
+                        image: 'img/1_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн кухни',
+                        title: 'Создадим лучший макет перепланировки',
+                        date: '26 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 2,
+                        image: 'img/2_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн для жизни',
+                        title: 'Лучшие интерьерные идеи по низкой цене',
+                        date: '22 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 3,
+                        image: 'img/3_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн Интерьера',
+                        title: 'Лучшие интерьерные решения для офисов',
+                        date: '25 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 4,
+                        image: 'img/1_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн кухни',
+                        title: 'Создадим лучший макет перепланировки',
+                        date: '26 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 5,
+                        image: 'img/2_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн для жизни',
+                        title: 'Лучшие интерьерные идеи по низкой цене',
+                        date: '22 December, 2022',
+                        link: '#'
+                    },
+                    {
+                        id: 6,
+                        image: 'img/3_news.png',
+                        alt: 'interior',
+                        category: 'Дизайн Интерьера',
+                        title: 'Лучшие интерьерные решения для офисов',
+                        date: '25 December, 2022',
+                        link: '#'
+                    },
+                ]
+            }
+        });
+    </script>
+</body>
+
+</html>
